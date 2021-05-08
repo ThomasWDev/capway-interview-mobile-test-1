@@ -35,6 +35,9 @@
 		F8EE70372646F0BA00694505 /* UIAlertController+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70262646F0BA00694505 /* UIAlertController+Show.swift */; };
 		F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703A2646F28B00694505 /* CWDashboardVC.swift */; };
 		F8EE703D2646F29B00694505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE703C2646F29B00694505 /* Main.storyboard */; };
+		F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703E2647131D00694505 /* CWNormalCell.swift */; };
+		F8EE70412647135700694505 /* CWMultipleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70402647135700694505 /* CWMultipleImageCell.swift */; };
+		F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCLCCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		F8EE70262646F0BA00694505 /* UIAlertController+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Show.swift"; sourceTree = "<group>"; };
 		F8EE703A2646F28B00694505 /* CWDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVC.swift; sourceTree = "<group>"; };
 		F8EE703C2646F29B00694505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F8EE703E2647131D00694505 /* CWNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNormalCell.swift; sourceTree = "<group>"; };
+		F8EE70402647135700694505 /* CWMultipleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWMultipleImageCell.swift; sourceTree = "<group>"; };
+		F8EE70422647162000694505 /* CWImageCLCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCLCCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +152,6 @@
 				545DA654632A12B49E55E720 /* Pods_CapwayTests.framework */,
 			);
 			name = Frameworks;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		F8EE6FD62646EF9C00694505 = {
@@ -155,6 +160,7 @@
 				F8EE6FE12646EF9D00694505 /* Capway */,
 				F8EE6FF82646EFA200694505 /* CapwayTests */,
 				F8EE70032646EFA300694505 /* CapwayUITests */,
+				92A462B8813C64F0370F5141 /* Frameworks */,
 				F8EE6FE02646EF9D00694505 /* Products */,
 				3BEAC7C7F150295A06D864B9 /* Pods */,
 			);
@@ -215,7 +221,6 @@
 		F8EE70132646F0B900694505 /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
-				92A462B8813C64F0370F5141 /* Frameworks */,
 				F8EE70142646F0B900694505 /* APIError.swift */,
 				F8EE70152646F0B900694505 /* APIClient.swift */,
 				F8EE70162646F0B900694505 /* AFRequestMonitor.swift */,
@@ -264,6 +269,9 @@
 			children = (
 				F8EE703A2646F28B00694505 /* CWDashboardVC.swift */,
 				F8EE703C2646F29B00694505 /* Main.storyboard */,
+				F8EE703E2647131D00694505 /* CWNormalCell.swift */,
+				F8EE70402647135700694505 /* CWMultipleImageCell.swift */,
+				F8EE70422647162000694505 /* CWImageCLCCell.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -506,8 +514,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */,
+				F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */,
 				F8EE70302646F0BA00694505 /* NetworkManager.swift in Sources */,
 				F8EE6FE32646EF9D00694505 /* AppDelegate.swift in Sources */,
+				F8EE70412647135700694505 /* CWMultipleImageCell.swift in Sources */,
 				F8EE702F2646F0BA00694505 /* Constants.swift in Sources */,
 				F8EE6FE52646EF9D00694505 /* SceneDelegate.swift in Sources */,
 				F8EE70292646F0BA00694505 /* AFRequestMonitor.swift in Sources */,
