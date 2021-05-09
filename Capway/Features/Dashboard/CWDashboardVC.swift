@@ -19,13 +19,21 @@ class CWDashboardVC: UIViewController {
 
 extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return Constants.dummyDataArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CWNormalCell.identifire, for: indexPath) as! CWNormalCell
+        let model = Constants.dummyDataArr[indexPath.row]
         
-        return cell
+        if model.multipleImage?.count ?? 0 > 1{
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: CWMultipleImageCell.identifire, for: indexPath) as! CWMultipleImageCell
+            cell2.configureCell(data: model)
+            return cell2
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: CWNormalCell.identifire, for: indexPath) as! CWNormalCell
+            cell.configureCell(data: model)
+            return cell
+        }
     }
     
     

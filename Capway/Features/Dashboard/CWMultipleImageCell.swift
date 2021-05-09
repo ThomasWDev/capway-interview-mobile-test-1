@@ -25,13 +25,20 @@ class CWMultipleImageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func configureCell(data: DashbaordResponse){
+        titleLbl.text = data.postTitle
+        dateLbl.text = data.postDate
+        moreBtn.isHidden = (data.isMoreBtnHide ?? false)
+        detailsLbl.text = data.details
+//        titleImageView.image = UIImage(named: <#T##String#>)
+        likeLbl.text = "\(data.likeCount ?? 0)"
+        commentLbl.text = "\(data.commentCount ?? 0)"
     }
 
     @IBAction func moreBtnAction(_ sender: Any) {
