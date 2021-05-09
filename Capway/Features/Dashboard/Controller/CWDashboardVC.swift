@@ -14,6 +14,8 @@ class CWDashboardVC: UIViewController {
     @IBOutlet weak private var tblView: UITableView!
     @IBOutlet weak private var userListClcView: UICollectionView!
     
+    private let viewModel = CWDashboardVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -29,11 +31,11 @@ class CWDashboardVC: UIViewController {
 
 extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Constants.dummyDataArr.count
+        return viewModel.dummyDataArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = Constants.dummyDataArr[indexPath.row]
+        let model = viewModel.dummyDataArr[indexPath.row]
         
         if model.multipleImage?.count ?? 0 > 1{
             let cell2 = tableView.dequeueReusableCell(withIdentifier: CWMultipleImageCell.identifire, for: indexPath) as! CWMultipleImageCell
@@ -49,7 +51,7 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let model = Constants.dummyDataArr[indexPath.row]
+        let model = viewModel.dummyDataArr[indexPath.row]
         if model.multipleImage?.count ?? 0 > 1{
             return 400
         }else{

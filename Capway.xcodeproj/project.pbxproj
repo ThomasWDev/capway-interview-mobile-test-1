@@ -42,6 +42,7 @@
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
 		F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashbaordResponse.swift */; };
 		F8EE704F264871AB00694505 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704E264871AB00694505 /* PostResponse.swift */; };
+		F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70542648732300694505 /* CWDashboardVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
 		F8EE704C2648717B00694505 /* DashbaordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordResponse.swift; sourceTree = "<group>"; };
 		F8EE704E264871AB00694505 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		F8EE70542648732300694505 /* CWDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,17 +277,50 @@
 		F8EE70392646F26200694505 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				F8EE703A2646F28B00694505 /* CWDashboardVC.swift */,
+				F8EE70532648730E00694505 /* ViewModel */,
+				F8EE7052264872CF00694505 /* Model */,
+				F8EE7051264872C000694505 /* Controller */,
+				F8EE7050264872BB00694505 /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F8EE7050264872BB00694505 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				F8EE703C2646F29B00694505 /* Main.storyboard */,
 				F8EE703E2647131D00694505 /* CWNormalCell.swift */,
 				F8EE70402647135700694505 /* CWMultipleImageCell.swift */,
 				F8EE70422647162000694505 /* CWImageCLCCell.swift */,
 				F8EE70482647F95300694505 /* CWUserListCell.swift */,
 				F8EE704A2648560500694505 /* CWUserHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8EE7051264872C000694505 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F8EE703A2646F28B00694505 /* CWDashboardVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8EE7052264872CF00694505 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				F8EE704C2648717B00694505 /* DashbaordResponse.swift */,
 				F8EE704E264871AB00694505 /* PostResponse.swift */,
 			);
-			path = Dashboard;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8EE70532648730E00694505 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8EE70542648732300694505 /* CWDashboardVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +576,7 @@
 				F8EE702C2646F0BA00694505 /* AFRequestInterceptor.swift in Sources */,
 				F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */,
 				F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */,
+				F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */,
 				F8EE702A2646F0BA00694505 /* APIEndpoints.swift in Sources */,
 				F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */,
 				F8EE70272646F0BA00694505 /* APIError.swift in Sources */,
