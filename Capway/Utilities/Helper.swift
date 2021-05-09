@@ -40,5 +40,27 @@ struct Helper{
         let dateStr = dateFormatter.string(from: date)
         return dateStr
     }
+    
+    static func postAttributedTxt(post: Post)-> NSAttributedString{
+        let authorName = post.authorName ?? ""
+        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
+        let authorNameString = NSMutableAttributedString(string: authorName, attributes:attrs)
+        
+        let detailsText = post.details ?? ""
+        
+        if detailsText.isEmpty{
+            return authorNameString
+        }
+        
+        let detailsString = NSMutableAttributedString(string: detailsText)
+        
+        let albumName = post.albumName ?? ""
+        let albumNameString = NSMutableAttributedString(string: albumName, attributes:attrs)
+
+        detailsString.append(albumNameString)
+        authorNameString.append(detailsString)
+        
+        return authorNameString
+    }
 
 }

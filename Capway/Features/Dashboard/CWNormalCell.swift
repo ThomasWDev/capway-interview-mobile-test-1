@@ -32,11 +32,12 @@ class CWNormalCell: UITableViewCell {
     }
     
     func configureCell(data: DashbaordResponse){
-        titleLbl.text = data.postTitle
+        let post = data.postTitle ?? Post()
+        titleLbl.attributedText = Helper.postAttributedTxt(post: post)
         dateLbl.text = data.postDate
         moreBtn.isHidden = (data.isMoreBtnHide ?? false)
         detailsLbl.text = data.details
-//        titleImageView.image = UIImage(named: <#T##String#>)
+        titleImageView.image = UIImage(named: data.multipleImage?.first ?? "")
         likeLbl.text = "\(data.likeCount ?? 0)"
         commentLbl.text = "\(data.commentCount ?? 0)"
     }
