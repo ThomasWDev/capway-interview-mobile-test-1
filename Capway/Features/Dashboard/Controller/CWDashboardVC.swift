@@ -58,8 +58,6 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
             return 267
         }
     }
-    
-    
 }
 
 

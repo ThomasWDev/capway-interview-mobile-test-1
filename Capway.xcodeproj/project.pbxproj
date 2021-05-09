@@ -43,6 +43,7 @@
 		F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashbaordResponse.swift */; };
 		F8EE704F264871AB00694505 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704E264871AB00694505 /* PostResponse.swift */; };
 		F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70542648732300694505 /* CWDashboardVM.swift */; };
+		F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70562648741500694505 /* CWImageDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		F8EE704C2648717B00694505 /* DashbaordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordResponse.swift; sourceTree = "<group>"; };
 		F8EE704E264871AB00694505 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		F8EE70542648732300694505 /* CWDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVM.swift; sourceTree = "<group>"; };
+		F8EE70562648741500694505 /* CWImageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				F8EE703A2646F28B00694505 /* CWDashboardVC.swift */,
+				F8EE70562648741500694505 /* CWImageDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				F8EE702E2646F0BA00694505 /* Endpoint.swift in Sources */,
 				F8EE702C2646F0BA00694505 /* AFRequestInterceptor.swift in Sources */,
 				F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */,
+				F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */,
 				F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */,
 				F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */,
 				F8EE702A2646F0BA00694505 /* APIEndpoints.swift in Sources */,

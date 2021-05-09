@@ -12,7 +12,7 @@ class CWUserListCell: UICollectionViewCell {
     
     static let identifire = "CWUserListCell"
     
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak private var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

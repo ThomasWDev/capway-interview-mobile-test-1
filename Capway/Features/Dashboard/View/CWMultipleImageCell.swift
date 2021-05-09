@@ -123,4 +123,24 @@ extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return  2
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageName = dataList?.multipleImage?[indexPath.row] ?? ""
+        
+        showImageDetails(imageName: imageName)
+    }
+    
+    private func showImageDetails(imageName: String){
+        let storyboard = UIStoryboard(storyboard: .dashboard)
+        let vc = storyboard.instantiateViewController(withIdentifier: CWImageDetailsVC.self)
+        vc.imageName = imageName
+        let mwindow = UIApplication.shared.connectedScenes
+            .filter({$0.activationState == .foregroundActive})
+            .map({$0 as? UIWindowScene})
+            .compactMap({$0})
+            .first?.windows
+            .filter({$0.isKeyWindow}).first
+        guard let parentVC = mwindow?.visibleViewController() else {return}
+        parentVC.present(vc, animated: true, completion: nil)
+    }
 }
