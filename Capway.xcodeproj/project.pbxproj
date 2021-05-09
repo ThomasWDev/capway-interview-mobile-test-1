@@ -40,6 +40,8 @@
 		F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCLCCell.swift */; };
 		F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70482647F95300694505 /* CWUserListCell.swift */; };
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
+		F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashbaordResponse.swift */; };
+		F8EE704F264871AB00694505 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704E264871AB00694505 /* PostResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		F8EE70422647162000694505 /* CWImageCLCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCLCCell.swift; sourceTree = "<group>"; };
 		F8EE70482647F95300694505 /* CWUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserListCell.swift; sourceTree = "<group>"; };
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
+		F8EE704C2648717B00694505 /* DashbaordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordResponse.swift; sourceTree = "<group>"; };
+		F8EE704E264871AB00694505 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,8 @@
 				F8EE70422647162000694505 /* CWImageCLCCell.swift */,
 				F8EE70482647F95300694505 /* CWUserListCell.swift */,
 				F8EE704A2648560500694505 /* CWUserHeaderView.swift */,
+				F8EE704C2648717B00694505 /* DashbaordResponse.swift */,
+				F8EE704E264871AB00694505 /* PostResponse.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				F8EE70412647135700694505 /* CWMultipleImageCell.swift in Sources */,
 				F8EE702F2646F0BA00694505 /* Constants.swift in Sources */,
 				F8EE6FE52646EF9D00694505 /* SceneDelegate.swift in Sources */,
+				F8EE704F264871AB00694505 /* PostResponse.swift in Sources */,
 				F8EE70292646F0BA00694505 /* AFRequestMonitor.swift in Sources */,
 				F8EE702B2646F0BA00694505 /* NestableCodingKey.swift in Sources */,
 				F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */,
@@ -541,6 +548,7 @@
 				F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */,
 				F8EE70372646F0BA00694505 /* UIAlertController+Show.swift in Sources */,
 				F8EE70352646F0BA00694505 /* Date+Helper.swift in Sources */,
+				F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */,
 				F8EE70282646F0BA00694505 /* APIClient.swift in Sources */,
 				F8EE70362646F0BA00694505 /* String+Helper.swift in Sources */,
 				F8EE702D2646F0BA00694505 /* URLPaths.swift in Sources */,

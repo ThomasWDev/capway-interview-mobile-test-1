@@ -48,13 +48,22 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = Constants.dummyDataArr[indexPath.row]
+        if model.multipleImage?.count ?? 0 > 1{
+            return 400
+        }else{
+            return 267
+        }
+    }
+    
     
 }
 
 
 extension CWDashboardVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

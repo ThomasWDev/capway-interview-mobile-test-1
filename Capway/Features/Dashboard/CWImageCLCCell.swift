@@ -14,4 +14,8 @@ class CWImageCLCCell: UICollectionViewCell {
     
     @IBOutlet weak private var titleImageView: UIImageView!
     
+    func configureCell(imageName: String){
+        titleImageView.image = UIImage(named: imageName)
+    }
+    
 }
