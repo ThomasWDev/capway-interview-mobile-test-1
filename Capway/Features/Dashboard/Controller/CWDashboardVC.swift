@@ -31,6 +31,11 @@ class CWDashboardVC: UIViewController {
 
 extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.dummyDataArr.count == 0{
+            Helper.emptyMessageInTableView(tableView, "No data available")
+        }else{
+            tableView.backgroundView = nil
+        }
         return viewModel.dummyDataArr.count
     }
     

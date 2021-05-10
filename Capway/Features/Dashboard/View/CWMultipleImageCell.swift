@@ -102,6 +102,11 @@ class CWMultipleImageCell: UITableViewCell {
 
 extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if dataList?.multipleImage?.count == 0{
+            Helper.emptyMessageInCollectionView(collectionView, "No data available")
+        }else{
+            collectionView.backgroundView = nil
+        }
         return dataList?.multipleImage?.count ?? 0
     }
     

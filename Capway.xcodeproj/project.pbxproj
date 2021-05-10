@@ -16,23 +16,12 @@
 		F8EE6FEF2646EFA200694505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE6FED2646EFA200694505 /* LaunchScreen.storyboard */; };
 		F8EE6FFA2646EFA200694505 /* CapwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE6FF92646EFA200694505 /* CapwayTests.swift */; };
 		F8EE70052646EFA300694505 /* CapwayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70042646EFA300694505 /* CapwayUITests.swift */; };
-		F8EE70272646F0BA00694505 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70142646F0B900694505 /* APIError.swift */; };
-		F8EE70282646F0BA00694505 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70152646F0B900694505 /* APIClient.swift */; };
-		F8EE70292646F0BA00694505 /* AFRequestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70162646F0B900694505 /* AFRequestMonitor.swift */; };
-		F8EE702A2646F0BA00694505 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70172646F0B900694505 /* APIEndpoints.swift */; };
-		F8EE702B2646F0BA00694505 /* NestableCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70182646F0B900694505 /* NestableCodingKey.swift */; };
-		F8EE702C2646F0BA00694505 /* AFRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70192646F0B900694505 /* AFRequestInterceptor.swift */; };
-		F8EE702D2646F0BA00694505 /* URLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701A2646F0B900694505 /* URLPaths.swift */; };
-		F8EE702E2646F0BA00694505 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701B2646F0B900694505 /* Endpoint.swift */; };
 		F8EE702F2646F0BA00694505 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701D2646F0BA00694505 /* Constants.swift */; };
 		F8EE70302646F0BA00694505 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701E2646F0BA00694505 /* NetworkManager.swift */; };
 		F8EE70312646F0BA00694505 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701F2646F0BA00694505 /* Helper.swift */; };
 		F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70202646F0BA00694505 /* CWAppHelper.swift */; };
 		F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */; };
 		F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */; };
-		F8EE70352646F0BA00694505 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70242646F0BA00694505 /* Date+Helper.swift */; };
-		F8EE70362646F0BA00694505 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70252646F0BA00694505 /* String+Helper.swift */; };
-		F8EE70372646F0BA00694505 /* UIAlertController+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70262646F0BA00694505 /* UIAlertController+Show.swift */; };
 		F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703A2646F28B00694505 /* CWDashboardVC.swift */; };
 		F8EE703D2646F29B00694505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE703C2646F29B00694505 /* Main.storyboard */; };
 		F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703E2647131D00694505 /* CWNormalCell.swift */; };
@@ -85,23 +74,12 @@
 		F8EE70002646EFA300694505 /* CapwayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapwayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EE70042646EFA300694505 /* CapwayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapwayUITests.swift; sourceTree = "<group>"; };
 		F8EE70062646EFA300694505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8EE70142646F0B900694505 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		F8EE70152646F0B900694505 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		F8EE70162646F0B900694505 /* AFRequestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFRequestMonitor.swift; sourceTree = "<group>"; };
-		F8EE70172646F0B900694505 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
-		F8EE70182646F0B900694505 /* NestableCodingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestableCodingKey.swift; sourceTree = "<group>"; };
-		F8EE70192646F0B900694505 /* AFRequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFRequestInterceptor.swift; sourceTree = "<group>"; };
-		F8EE701A2646F0B900694505 /* URLPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLPaths.swift; sourceTree = "<group>"; };
-		F8EE701B2646F0B900694505 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F8EE701D2646F0BA00694505 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F8EE701E2646F0BA00694505 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F8EE701F2646F0BA00694505 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F8EE70202646F0BA00694505 /* CWAppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWAppHelper.swift; sourceTree = "<group>"; };
 		F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Window+VisibleVC.swift"; sourceTree = "<group>"; };
 		F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helper.swift"; sourceTree = "<group>"; };
-		F8EE70242646F0BA00694505 /* Date+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
-		F8EE70252646F0BA00694505 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
-		F8EE70262646F0BA00694505 /* UIAlertController+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Show.swift"; sourceTree = "<group>"; };
 		F8EE703A2646F28B00694505 /* CWDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVC.swift; sourceTree = "<group>"; };
 		F8EE703C2646F29B00694505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F8EE703E2647131D00694505 /* CWNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNormalCell.swift; sourceTree = "<group>"; };
@@ -192,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				F8EE70382646F0BD00694505 /* Features */,
-				F8EE70132646F0B900694505 /* API Manager */,
 				F8EE70212646F0BA00694505 /* Extensions */,
 				F8EE701C2646F0BA00694505 /* Utilities */,
 				F8EE70122646F07700694505 /* Resources */,
@@ -230,21 +207,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F8EE70132646F0B900694505 /* API Manager */ = {
-			isa = PBXGroup;
-			children = (
-				F8EE70142646F0B900694505 /* APIError.swift */,
-				F8EE70152646F0B900694505 /* APIClient.swift */,
-				F8EE70162646F0B900694505 /* AFRequestMonitor.swift */,
-				F8EE70172646F0B900694505 /* APIEndpoints.swift */,
-				F8EE70182646F0B900694505 /* NestableCodingKey.swift */,
-				F8EE70192646F0B900694505 /* AFRequestInterceptor.swift */,
-				F8EE701A2646F0B900694505 /* URLPaths.swift */,
-				F8EE701B2646F0B900694505 /* Endpoint.swift */,
-			);
-			path = "API Manager";
-			sourceTree = "<group>";
-		};
 		F8EE701C2646F0BA00694505 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,9 +223,6 @@
 			children = (
 				F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */,
 				F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */,
-				F8EE70242646F0BA00694505 /* Date+Helper.swift */,
-				F8EE70252646F0BA00694505 /* String+Helper.swift */,
-				F8EE70262646F0BA00694505 /* UIAlertController+Show.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,26 +531,15 @@
 				F8EE702F2646F0BA00694505 /* Constants.swift in Sources */,
 				F8EE6FE52646EF9D00694505 /* SceneDelegate.swift in Sources */,
 				F8EE704F264871AB00694505 /* PostResponse.swift in Sources */,
-				F8EE70292646F0BA00694505 /* AFRequestMonitor.swift in Sources */,
-				F8EE702B2646F0BA00694505 /* NestableCodingKey.swift in Sources */,
 				F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */,
-				F8EE702E2646F0BA00694505 /* Endpoint.swift in Sources */,
-				F8EE702C2646F0BA00694505 /* AFRequestInterceptor.swift in Sources */,
 				F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */,
 				F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */,
 				F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */,
 				F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */,
-				F8EE702A2646F0BA00694505 /* APIEndpoints.swift in Sources */,
 				F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */,
-				F8EE70272646F0BA00694505 /* APIError.swift in Sources */,
 				F8EE70312646F0BA00694505 /* Helper.swift in Sources */,
 				F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */,
-				F8EE70372646F0BA00694505 /* UIAlertController+Show.swift in Sources */,
-				F8EE70352646F0BA00694505 /* Date+Helper.swift in Sources */,
 				F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */,
-				F8EE70282646F0BA00694505 /* APIClient.swift in Sources */,
-				F8EE70362646F0BA00694505 /* String+Helper.swift in Sources */,
-				F8EE702D2646F0BA00694505 /* URLPaths.swift in Sources */,
 				F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
