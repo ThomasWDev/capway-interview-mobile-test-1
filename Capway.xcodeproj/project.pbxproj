@@ -29,7 +29,7 @@
 		F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCLCCell.swift */; };
 		F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70482647F95300694505 /* CWUserListCell.swift */; };
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
-		F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashbaordResponse.swift */; };
+		F8EE704D2648717B00694505 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashboardResponse.swift */; };
 		F8EE704F264871AB00694505 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704E264871AB00694505 /* PostResponse.swift */; };
 		F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70542648732300694505 /* CWDashboardVM.swift */; };
 		F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70562648741500694505 /* CWImageDetailsVC.swift */; };
@@ -87,7 +87,7 @@
 		F8EE70422647162000694505 /* CWImageCLCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCLCCell.swift; sourceTree = "<group>"; };
 		F8EE70482647F95300694505 /* CWUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserListCell.swift; sourceTree = "<group>"; };
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
-		F8EE704C2648717B00694505 /* DashbaordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbaordResponse.swift; sourceTree = "<group>"; };
+		F8EE704C2648717B00694505 /* DashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardResponse.swift; sourceTree = "<group>"; };
 		F8EE704E264871AB00694505 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		F8EE70542648732300694505 /* CWDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVM.swift; sourceTree = "<group>"; };
 		F8EE70562648741500694505 /* CWImageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageDetailsVC.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		F8EE7052264872CF00694505 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F8EE704C2648717B00694505 /* DashbaordResponse.swift */,
+				F8EE704C2648717B00694505 /* DashboardResponse.swift */,
 				F8EE704E264871AB00694505 /* PostResponse.swift */,
 			);
 			path = Model;
@@ -539,7 +539,7 @@
 				F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */,
 				F8EE70312646F0BA00694505 /* Helper.swift in Sources */,
 				F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */,
-				F8EE704D2648717B00694505 /* DashbaordResponse.swift in Sources */,
+				F8EE704D2648717B00694505 /* DashboardResponse.swift in Sources */,
 				F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +712,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Capway/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -731,6 +732,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Capway/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,7 +10,7 @@ import UIKit
 
 class CWUserListCell: UICollectionViewCell {
     
-    static let identifire = "CWUserListCell"
+    static let identifier = "CWUserListCell"
     
     @IBOutlet weak private var userImageView: UIImageView!
     

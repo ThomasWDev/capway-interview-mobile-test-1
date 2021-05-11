@@ -43,12 +43,12 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
         let model = viewModel.dummyDataArr[indexPath.row]
         
         if model.multipleImage?.count ?? 0 > 1{
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: CWMultipleImageCell.identifire, for: indexPath) as! CWMultipleImageCell
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: CWMultipleImageCell.identifier, for: indexPath) as! CWMultipleImageCell
             cell2.selectionStyle = .none
             cell2.configureCell(data: model)
             return cell2
         }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: CWNormalCell.identifire, for: indexPath) as! CWNormalCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CWNormalCell.identifier, for: indexPath) as! CWNormalCell
             cell.selectionStyle = .none
             cell.configureCell(data: model)
             return cell
@@ -60,7 +60,7 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
         if model.multipleImage?.count ?? 0 > 1{
             return 400
         }else{
-            return 267
+            return UITableView.automaticDimension
         }
     }
 }
@@ -72,7 +72,7 @@ extension CWDashboardVC: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CWUserListCell.identifire, for: indexPath) as! CWUserListCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CWUserListCell.identifier, for: indexPath) as! CWUserListCell
         return cell
     }
     
@@ -80,7 +80,7 @@ extension CWDashboardVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CWUserHeaderView.identifire, for: indexPath) as! CWUserHeaderView
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CWUserHeaderView.identifier, for: indexPath) as! CWUserHeaderView
             return headerView
         default:
             return UICollectionReusableView()

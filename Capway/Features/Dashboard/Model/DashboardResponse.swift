@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DashbaordResponse{
+struct DashboardResponse{
     var imageName: String?
     var postTitle: Post?
     var postDate: String?

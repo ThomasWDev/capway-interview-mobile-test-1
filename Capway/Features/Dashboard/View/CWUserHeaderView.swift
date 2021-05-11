@@ -10,7 +10,7 @@ import UIKit
 
 class CWUserHeaderView: UICollectionReusableView {
     
-    static let identifire = "CWUserHeaderView"
+    static let identifier = "CWUserHeaderView"
     
     @IBOutlet weak private var sendBtn: UIButton!
 

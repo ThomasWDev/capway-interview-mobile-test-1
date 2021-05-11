@@ -10,7 +10,7 @@ import UIKit
 
 class CWImageCLCCell: UICollectionViewCell {
     
-    static let identifire = "CWImageCLCCell"
+    static let identifier = "CWImageCLCCell"
     
     @IBOutlet weak private var titleImageView: UIImageView!
     

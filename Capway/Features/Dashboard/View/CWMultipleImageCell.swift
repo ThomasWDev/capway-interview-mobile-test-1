@@ -10,7 +10,7 @@ import UIKit
 
 class CWMultipleImageCell: UITableViewCell {
     
-    static let identifire = "CWMultipleImageCell"
+    static let identifier = "CWMultipleImageCell"
     @IBOutlet weak private var profileImageView: UIImageView!
     @IBOutlet weak private var titleLbl: UILabel!
     @IBOutlet weak private var dateLbl: UILabel!
@@ -23,7 +23,7 @@ class CWMultipleImageCell: UITableViewCell {
     @IBOutlet weak private var heartBtn: UIButton!
     @IBOutlet weak private var commentBtn: UIButton!
     
-    private var dataList: DashbaordResponse?
+    private var dataList: DashboardResponse?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +37,7 @@ class CWMultipleImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(data: DashbaordResponse){
+    func configureCell(data: DashboardResponse){
         dataList = data
         let post = data.postTitle ?? Post()
         titleLbl.attributedText = Helper.postAttributedTxt(post: post)
@@ -111,7 +111,7 @@ extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CWImageCLCCell.identifire, for: indexPath) as! CWImageCLCCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CWImageCLCCell.identifier, for: indexPath) as! CWImageCLCCell
         let imageName = dataList?.multipleImage?[indexPath.row] ?? ""
         cell.configureCell(imageName: imageName)
         return cell

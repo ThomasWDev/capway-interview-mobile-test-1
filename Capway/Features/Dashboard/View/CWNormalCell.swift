@@ -10,7 +10,7 @@ import UIKit
 
 class CWNormalCell: UITableViewCell {
     
-    static let identifire = "CWNormalCell"
+    static let identifier = "CWNormalCell"
     @IBOutlet weak private var profileImageView: UIImageView!
     @IBOutlet weak private var titleLbl: UILabel!
     @IBOutlet weak private var dateLbl: UILabel!
@@ -31,7 +31,7 @@ class CWNormalCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(data: DashbaordResponse){
+    func configureCell(data: DashboardResponse){
         let post = data.postTitle ?? Post()
         titleLbl.attributedText = Helper.postAttributedTxt(post: post)
         dateLbl.text = data.postDate
