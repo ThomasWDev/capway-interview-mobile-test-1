@@ -10,16 +10,25 @@
 		3351161EE6D3C7D61E555BCB /* Pods_CapwayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545DA654632A12B49E55E720 /* Pods_CapwayTests.framework */; };
 		5F59E320F9DEC719849BDD22 /* Pods_Capway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB9C7152DB3F7A2A7DE59DC /* Pods_Capway.framework */; };
 		6ED78968E2AD67960B1D6F65 /* Pods_Capway_CapwayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6BBE1A6003ACA58BF4E872 /* Pods_Capway_CapwayUITests.framework */; };
+		A890AC85264AEF67000CC765 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC7D264AEF67000CC765 /* ResponseHandler.swift */; };
+		A890AC86264AEF67000CC765 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC7E264AEF67000CC765 /* NetworkManager.swift */; };
+		A890AC87264AEF67000CC765 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC7F264AEF67000CC765 /* ParameterEncoding.swift */; };
+		A890AC88264AEF67000CC765 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC81264AEF67000CC765 /* DataResponse.swift */; };
+		A890AC89264AEF67000CC765 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC82264AEF67000CC765 /* ErrorResponse.swift */; };
+		A890AC8A264AEF67000CC765 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC83264AEF67000CC765 /* NetworkError.swift */; };
+		A890AC8B264AEF67000CC765 /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC84264AEF67000CC765 /* RequestConfiguration.swift */; };
+		A890AC96264AEFBB000CC765 /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC91264AEFBB000CC765 /* FeedDataSource.swift */; };
+		A890AC97264AEFBB000CC765 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC92264AEFBB000CC765 /* FeedRepository.swift */; };
+		A890AC98264AEFBB000CC765 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC94264AEFBB000CC765 /* Feed.swift */; };
+		A890AC99264AEFBB000CC765 /* FeedNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890AC95264AEFBB000CC765 /* FeedNetworkDataSource.swift */; };
 		F8EE6FE32646EF9D00694505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE6FE22646EF9D00694505 /* AppDelegate.swift */; };
 		F8EE6FE52646EF9D00694505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE6FE42646EF9D00694505 /* SceneDelegate.swift */; };
 		F8EE6FEC2646EFA200694505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8EE6FEB2646EFA200694505 /* Assets.xcassets */; };
 		F8EE6FEF2646EFA200694505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE6FED2646EFA200694505 /* LaunchScreen.storyboard */; };
 		F8EE6FFA2646EFA200694505 /* CapwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE6FF92646EFA200694505 /* CapwayTests.swift */; };
 		F8EE70052646EFA300694505 /* CapwayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70042646EFA300694505 /* CapwayUITests.swift */; };
-		F8EE702F2646F0BA00694505 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701D2646F0BA00694505 /* Constants.swift */; };
-		F8EE70302646F0BA00694505 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701E2646F0BA00694505 /* NetworkManager.swift */; };
+		F8EE70302646F0BA00694505 /* NetworkConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701E2646F0BA00694505 /* NetworkConnectionManager.swift */; };
 		F8EE70312646F0BA00694505 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701F2646F0BA00694505 /* Helper.swift */; };
-		F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70202646F0BA00694505 /* CWAppHelper.swift */; };
 		F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */; };
 		F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */; };
 		F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703A2646F28B00694505 /* CWDashboardVC.swift */; };
@@ -29,9 +38,6 @@
 		F8EE70432647162000694505 /* CWImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCell.swift */; };
 		F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70482647F95300694505 /* CWUserListCell.swift */; };
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
-		F8EE704D2648717B00694505 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashboardResponse.swift */; };
-		F8EE704F264871AB00694505 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704E264871AB00694505 /* PostResponse.swift */; };
-		F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70542648732300694505 /* CWDashboardVM.swift */; };
 		F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70562648741500694505 /* CWImageDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,17 @@
 		545DA654632A12B49E55E720 /* Pods_CapwayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapwayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D875CE3994EF8ECD551B14B /* Pods-Capway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capway.debug.xcconfig"; path = "Target Support Files/Pods-Capway/Pods-Capway.debug.xcconfig"; sourceTree = "<group>"; };
 		99782703F75FBAA0AEB1D3F7 /* Pods-CapwayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapwayTests.release.xcconfig"; path = "Target Support Files/Pods-CapwayTests/Pods-CapwayTests.release.xcconfig"; sourceTree = "<group>"; };
+		A890AC7D264AEF67000CC765 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		A890AC7E264AEF67000CC765 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A890AC7F264AEF67000CC765 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		A890AC81264AEF67000CC765 /* DataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		A890AC82264AEF67000CC765 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		A890AC83264AEF67000CC765 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A890AC84264AEF67000CC765 /* RequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
+		A890AC91264AEFBB000CC765 /* FeedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		A890AC92264AEFBB000CC765 /* FeedRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
+		A890AC94264AEFBB000CC765 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		A890AC95264AEFBB000CC765 /* FeedNetworkDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedNetworkDataSource.swift; sourceTree = "<group>"; };
 		B647C60FDC1991D5A401B33D /* Pods-Capway-CapwayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capway-CapwayUITests.release.xcconfig"; path = "Target Support Files/Pods-Capway-CapwayUITests/Pods-Capway-CapwayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAB9C7152DB3F7A2A7DE59DC /* Pods_Capway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EE6FDF2646EF9D00694505 /* Capway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capway.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,10 +91,8 @@
 		F8EE70002646EFA300694505 /* CapwayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapwayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EE70042646EFA300694505 /* CapwayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapwayUITests.swift; sourceTree = "<group>"; };
 		F8EE70062646EFA300694505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8EE701D2646F0BA00694505 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F8EE701E2646F0BA00694505 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F8EE701E2646F0BA00694505 /* NetworkConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectionManager.swift; sourceTree = "<group>"; };
 		F8EE701F2646F0BA00694505 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		F8EE70202646F0BA00694505 /* CWAppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWAppHelper.swift; sourceTree = "<group>"; };
 		F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Window+VisibleVC.swift"; sourceTree = "<group>"; };
 		F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helper.swift"; sourceTree = "<group>"; };
 		F8EE703A2646F28B00694505 /* CWDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVC.swift; sourceTree = "<group>"; };
@@ -87,9 +102,6 @@
 		F8EE70422647162000694505 /* CWImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCell.swift; sourceTree = "<group>"; };
 		F8EE70482647F95300694505 /* CWUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserListCell.swift; sourceTree = "<group>"; };
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
-		F8EE704C2648717B00694505 /* DashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardResponse.swift; sourceTree = "<group>"; };
-		F8EE704E264871AB00694505 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
-		F8EE70542648732300694505 /* CWDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVM.swift; sourceTree = "<group>"; };
 		F8EE70562648741500694505 /* CWImageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +154,55 @@
 				545DA654632A12B49E55E720 /* Pods_CapwayTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A890AC7C264AEF67000CC765 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A890AC7D264AEF67000CC765 /* ResponseHandler.swift */,
+				A890AC7E264AEF67000CC765 /* NetworkManager.swift */,
+				A890AC7F264AEF67000CC765 /* ParameterEncoding.swift */,
+				A890AC80264AEF67000CC765 /* Models */,
+				A890AC84264AEF67000CC765 /* RequestConfiguration.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A890AC80264AEF67000CC765 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A890AC81264AEF67000CC765 /* DataResponse.swift */,
+				A890AC82264AEF67000CC765 /* ErrorResponse.swift */,
+				A890AC83264AEF67000CC765 /* NetworkError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A890AC8F264AEFBB000CC765 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A890AC90264AEFBB000CC765 /* Photo */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A890AC90264AEFBB000CC765 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				A890AC91264AEFBB000CC765 /* FeedDataSource.swift */,
+				A890AC92264AEFBB000CC765 /* FeedRepository.swift */,
+				A890AC93264AEFBB000CC765 /* Models */,
+				A890AC95264AEFBB000CC765 /* FeedNetworkDataSource.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		A890AC93264AEFBB000CC765 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A890AC94264AEFBB000CC765 /* Feed.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F8EE6FD62646EF9C00694505 = {
@@ -210,10 +271,8 @@
 		F8EE701C2646F0BA00694505 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F8EE701D2646F0BA00694505 /* Constants.swift */,
-				F8EE701E2646F0BA00694505 /* NetworkManager.swift */,
+				F8EE701E2646F0BA00694505 /* NetworkConnectionManager.swift */,
 				F8EE701F2646F0BA00694505 /* Helper.swift */,
-				F8EE70202646F0BA00694505 /* CWAppHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -230,6 +289,8 @@
 		F8EE70382646F0BD00694505 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A890AC8F264AEFBB000CC765 /* Repositories */,
+				A890AC7C264AEF67000CC765 /* Network */,
 				F8EE70392646F26200694505 /* Dashboard */,
 			);
 			path = Features;
@@ -238,8 +299,6 @@
 		F8EE70392646F26200694505 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				F8EE70532648730E00694505 /* ViewModel */,
-				F8EE7052264872CF00694505 /* Model */,
 				F8EE7051264872C000694505 /* Controller */,
 				F8EE7050264872BB00694505 /* View */,
 			);
@@ -266,23 +325,6 @@
 				F8EE70562648741500694505 /* CWImageDetailsVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		F8EE7052264872CF00694505 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F8EE704C2648717B00694505 /* DashboardResponse.swift */,
-				F8EE704E264871AB00694505 /* PostResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F8EE70532648730E00694505 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F8EE70542648732300694505 /* CWDashboardVM.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,23 +565,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A890AC98264AEFBB000CC765 /* Feed.swift in Sources */,
+				A890AC87264AEF67000CC765 /* ParameterEncoding.swift in Sources */,
 				F8EE70432647162000694505 /* CWImageCell.swift in Sources */,
+				A890AC85264AEF67000CC765 /* ResponseHandler.swift in Sources */,
+				A890AC8B264AEF67000CC765 /* RequestConfiguration.swift in Sources */,
 				F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */,
-				F8EE70302646F0BA00694505 /* NetworkManager.swift in Sources */,
+				F8EE70302646F0BA00694505 /* NetworkConnectionManager.swift in Sources */,
 				F8EE6FE32646EF9D00694505 /* AppDelegate.swift in Sources */,
 				F8EE70412647135700694505 /* CWMultipleImageCell.swift in Sources */,
-				F8EE702F2646F0BA00694505 /* Constants.swift in Sources */,
 				F8EE6FE52646EF9D00694505 /* SceneDelegate.swift in Sources */,
-				F8EE704F264871AB00694505 /* PostResponse.swift in Sources */,
+				A890AC8A264AEF67000CC765 /* NetworkError.swift in Sources */,
+				A890AC96264AEFBB000CC765 /* FeedDataSource.swift in Sources */,
 				F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */,
 				F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */,
 				F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */,
+				A890AC97264AEFBB000CC765 /* FeedRepository.swift in Sources */,
+				A890AC86264AEF67000CC765 /* NetworkManager.swift in Sources */,
+				A890AC99264AEFBB000CC765 /* FeedNetworkDataSource.swift in Sources */,
+				A890AC88264AEF67000CC765 /* DataResponse.swift in Sources */,
 				F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */,
-				F8EE70552648732300694505 /* CWDashboardVM.swift in Sources */,
+				A890AC89264AEF67000CC765 /* ErrorResponse.swift in Sources */,
 				F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */,
 				F8EE70312646F0BA00694505 /* Helper.swift in Sources */,
-				F8EE70322646F0BA00694505 /* CWAppHelper.swift in Sources */,
-				F8EE704D2648717B00694505 /* DashboardResponse.swift in Sources */,
 				F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

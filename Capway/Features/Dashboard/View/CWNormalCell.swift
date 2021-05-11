@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CWNormalCell: UITableViewCell {
     
@@ -25,21 +26,22 @@ class CWNormalCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(data: DashboardResponse){
-        let post = data.postTitle ?? Post()
-        titleLbl.attributedText = Helper.postAttributedTxt(post: post)
-        dateLbl.text = data.postDate
-        moreBtn.isHidden = (data.isMoreBtnHide ?? false)
-        detailsLbl.text = data.details
-        titleImageView.image = UIImage(named: data.multipleImage?.first ?? "")
-        likeLbl.text = "\(data.likeCount ?? 0)"
-        commentLbl.text = "\(data.commentCount ?? 0)"
+    func configureCellWith(feed: Feed){
+        titleLbl.attributedText = Helper.postAttributedTxt(feed: feed)
+        dateLbl.text = feed.publishedAt
+        detailsLbl.text = feed.description
+        titleImageView.sd_setImage(with: URL(string: feed.urlToImage ?? ""), completed: nil)
+        profileImageView.sd_setImage(with: URL(string: feed.avatarURL), placeholderImage: UIImage(systemName: "person.circle.fill"), options: .refreshCached, context: nil)
+        likeLbl.text = "\(feed.likes)"
+        commentLbl.text = "\(feed.comments)"
     }
 
     @IBAction func moreBtnAction(_ sender: Any) {

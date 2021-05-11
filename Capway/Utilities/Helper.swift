@@ -29,23 +29,19 @@ struct Helper{
         noDataLabel.text = title
     }
     
-    static func postAttributedTxt(post: Post)-> NSAttributedString{
-        let authorName = post.authorName ?? ""
+    static func postAttributedTxt(feed: Feed)-> NSAttributedString{
+        let authorName = feed.author ?? ""
         let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
         let authorNameString = NSMutableAttributedString(string: authorName, attributes:attrs)
         
-        let detailsText = post.details ?? ""
+        let detailsText = " \(feed.title ?? "")"
         
         if detailsText.isEmpty{
             return authorNameString
         }
         
         let detailsString = NSMutableAttributedString(string: detailsText)
-        
-        let albumName = post.albumName ?? ""
-        let albumNameString = NSMutableAttributedString(string: albumName, attributes:attrs)
 
-        detailsString.append(albumNameString)
         authorNameString.append(detailsString)
         
         return authorNameString

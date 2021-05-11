@@ -25,8 +25,7 @@ class CWMultipleImageCell: UITableViewCell {
     @IBOutlet weak private var shareBtn: UIButton!
     @IBOutlet weak private var heartBtn: UIButton!
     @IBOutlet weak private var commentBtn: UIButton!
-    
-    private var dataList: DashboardResponse?
+    private var feed : Feed?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,15 +39,14 @@ class CWMultipleImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(data: DashboardResponse){
-        dataList = data
-        let post = data.postTitle ?? Post()
-        titleLbl.attributedText = Helper.postAttributedTxt(post: post)
-        dateLbl.text = data.postDate
-        moreBtn.isHidden = (data.isMoreBtnHide ?? false)
-        detailsLbl.text = data.details
-        likeLbl.text = "\(data.likeCount ?? 0)"
-        commentLbl.text = "\(data.commentCount ?? 0)"
+    func configureCellWith(feed: Feed){
+        self.feed = feed
+        titleLbl.attributedText = Helper.postAttributedTxt(feed: feed)
+        dateLbl.text = feed.publishedAt
+        detailsLbl.text = feed.description
+        profileImageView.sd_setImage(with: URL(string: feed.avatarURL), placeholderImage: UIImage(systemName: "person.circle.fill"), options: .refreshCached, context: nil)
+        likeLbl.text = "\(feed.likes)"
+        commentLbl.text = "\(feed.comments)"
         collectionView.reloadData()
     }
 
@@ -95,12 +93,7 @@ extension CWMultipleImageCell : RAMCollectionViewFlemishBondLayoutDelegate {
 
 extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if dataList?.multipleImage?.count == 0{
-            Helper.emptyMessageInCollectionView(collectionView, "No data available")
-        } else {
-            collectionView.backgroundView = nil
-        }
-        if let count = dataList?.multipleImage?.count {
+        if let count = self.feed?.images.count {
             return count > CWMultipleImageCell.MAX_IMAGES_TO_DISPLAY ? CWMultipleImageCell.MAX_IMAGES_TO_DISPLAY : count
         }
         return 0
@@ -108,8 +101,8 @@ extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CWImageCell.identifier, for: indexPath) as! CWImageCell
-        let imageName = dataList?.multipleImage?[indexPath.row] ?? ""
-        let count = dataList!.multipleImage!.count
+        let imageName = self.feed?.images[indexPath.row] ?? ""
+        let count = self.feed!.images.count
         let counterDisplay = count > CWMultipleImageCell.MAX_IMAGES_TO_DISPLAY ? CWMultipleImageCell.MAX_IMAGES_TO_DISPLAY : count
         cell.configureCell(imageName: imageName, imageCounter: count, isLastCell: indexPath.row == counterDisplay - 1)
         return cell
@@ -123,7 +116,7 @@ extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageName = dataList?.multipleImage?[indexPath.row] ?? ""
+        let imageName = self.feed?.images[indexPath.row] ?? ""
         
         showImageDetails(imageName: imageName)
     }

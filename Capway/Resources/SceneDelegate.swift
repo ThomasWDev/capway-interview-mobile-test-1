@@ -27,8 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             appDelegate.window = self.window
             setupDashboardVC()
             
-        }else{
-            DLog("not getting window")
         }
     }
     
@@ -56,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
-        NetworkManager.shared.startMonitoring()
+        NetworkConnectionManager.shared.startMonitoring()
     }
     
     @available(iOS 13.0, *)
@@ -64,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-        NetworkManager.shared.stopMonitoring()
+        NetworkConnectionManager.shared.stopMonitoring()
     }
     
     private func setupDashboardVC(){

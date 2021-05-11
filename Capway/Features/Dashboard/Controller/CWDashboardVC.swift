@@ -7,18 +7,44 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class CWDashboardVC: UIViewController {
     
     @IBOutlet weak private var searchView: UIView!
     @IBOutlet weak private var tblView: UITableView!
     @IBOutlet weak private var userListClcView: UICollectionView!
+    private let networkManager = NetworkManager()
+    private var photoRepository : FeedRepository?
+    private var feeds : [Feed] = [] {
+        didSet {
+            /// Hardcoded testing
+            var multipleFeed = Feed(author: "Thomas Woodfin", title: "Testing multiple images", urlToImage: "https://robohash.org/cc367b7dce35acdd3b4c6453cb392c0b?set=set4&bgset=&size=400x400", description: "", publishedAt: "2021-05-11T16:49:00Z")
+            multipleFeed.images = ["ic_dummy_img_3", "ic_dummy_img_4", "ic_dummy_img_5", "ic_dummy_img_6", "ic_dummy_img_8"]
+            feeds.append(multipleFeed)
+            self.tblView.reloadData()
+        }
+    }
     
-    private let viewModel = CWDashboardVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchFeeds()
         style()
+    }
+
+    private func fetchFeeds() {
+        SVProgressHUD.show()
+        photoRepository = FeedRepository(networkManager: networkManager)
+        photoRepository?.fetchFeeds(completion: { (result) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+                switch result {
+                case .success(let feeds): self.feeds = feeds
+                    case .failure(let error): break
+                }
+            }
+        })
     }
     
     private func style(){
@@ -26,31 +52,27 @@ class CWDashboardVC: UIViewController {
         searchView.layer.cornerRadius = 20
         userListClcView.delegate = self
         userListClcView.dataSource = self
+        tblView.tableFooterView = UIView()
     }
 }
 
 extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.dummyDataArr.count == 0{
-            Helper.emptyMessageInTableView(tableView, "No data available")
-        }else{
-            tableView.backgroundView = nil
-        }
-        return viewModel.dummyDataArr.count
+        return feeds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = viewModel.dummyDataArr[indexPath.row]
+        let feed = feeds[indexPath.row]
         
-        if model.multipleImage?.count ?? 0 > 1{
+        if feed.isMultipleImages {
             let cell2 = tableView.dequeueReusableCell(withIdentifier: CWMultipleImageCell.identifier, for: indexPath) as! CWMultipleImageCell
             cell2.selectionStyle = .none
-            cell2.configureCell(data: model)
+            cell2.configureCellWith(feed: feed)
             return cell2
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: CWNormalCell.identifier, for: indexPath) as! CWNormalCell
             cell.selectionStyle = .none
-            cell.configureCell(data: model)
+            cell.configureCellWith(feed: feed)
             return cell
         }
     }
