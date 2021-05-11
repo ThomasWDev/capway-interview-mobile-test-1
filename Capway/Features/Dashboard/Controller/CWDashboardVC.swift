@@ -56,12 +56,7 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let model = viewModel.dummyDataArr[indexPath.row]
-        if model.multipleImage?.count ?? 0 > 1{
-            return 400
-        }else{
-            return UITableView.automaticDimension
-        }
+        return UITableView.automaticDimension
     }
 }
 

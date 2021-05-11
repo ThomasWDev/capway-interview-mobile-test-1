@@ -26,7 +26,7 @@
 		F8EE703D2646F29B00694505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE703C2646F29B00694505 /* Main.storyboard */; };
 		F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703E2647131D00694505 /* CWNormalCell.swift */; };
 		F8EE70412647135700694505 /* CWMultipleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70402647135700694505 /* CWMultipleImageCell.swift */; };
-		F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCLCCell.swift */; };
+		F8EE70432647162000694505 /* CWImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCell.swift */; };
 		F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70482647F95300694505 /* CWUserListCell.swift */; };
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
 		F8EE704D2648717B00694505 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704C2648717B00694505 /* DashboardResponse.swift */; };
@@ -84,7 +84,7 @@
 		F8EE703C2646F29B00694505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F8EE703E2647131D00694505 /* CWNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNormalCell.swift; sourceTree = "<group>"; };
 		F8EE70402647135700694505 /* CWMultipleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWMultipleImageCell.swift; sourceTree = "<group>"; };
-		F8EE70422647162000694505 /* CWImageCLCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCLCCell.swift; sourceTree = "<group>"; };
+		F8EE70422647162000694505 /* CWImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCell.swift; sourceTree = "<group>"; };
 		F8EE70482647F95300694505 /* CWUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserListCell.swift; sourceTree = "<group>"; };
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
 		F8EE704C2648717B00694505 /* DashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardResponse.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 				F8EE703C2646F29B00694505 /* Main.storyboard */,
 				F8EE703E2647131D00694505 /* CWNormalCell.swift */,
 				F8EE70402647135700694505 /* CWMultipleImageCell.swift */,
-				F8EE70422647162000694505 /* CWImageCLCCell.swift */,
+				F8EE70422647162000694505 /* CWImageCell.swift */,
 				F8EE70482647F95300694505 /* CWUserListCell.swift */,
 				F8EE704A2648560500694505 /* CWUserHeaderView.swift */,
 			);
@@ -523,7 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8EE70432647162000694505 /* CWImageCLCCell.swift in Sources */,
+				F8EE70432647162000694505 /* CWImageCell.swift in Sources */,
 				F8EE703F2647131D00694505 /* CWNormalCell.swift in Sources */,
 				F8EE70302646F0BA00694505 /* NetworkManager.swift in Sources */,
 				F8EE6FE32646EF9D00694505 /* AppDelegate.swift in Sources */,
