@@ -29,7 +29,6 @@
 		F8EE70052646EFA300694505 /* CapwayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70042646EFA300694505 /* CapwayUITests.swift */; };
 		F8EE70302646F0BA00694505 /* NetworkConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701E2646F0BA00694505 /* NetworkConnectionManager.swift */; };
 		F8EE70312646F0BA00694505 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE701F2646F0BA00694505 /* Helper.swift */; };
-		F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */; };
 		F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */; };
 		F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE703A2646F28B00694505 /* CWDashboardVC.swift */; };
 		F8EE703D2646F29B00694505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EE703C2646F29B00694505 /* Main.storyboard */; };
@@ -38,7 +37,6 @@
 		F8EE70432647162000694505 /* CWImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70422647162000694505 /* CWImageCell.swift */; };
 		F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70482647F95300694505 /* CWUserListCell.swift */; };
 		F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE704A2648560500694505 /* CWUserHeaderView.swift */; };
-		F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE70562648741500694505 /* CWImageDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +91,6 @@
 		F8EE70062646EFA300694505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8EE701E2646F0BA00694505 /* NetworkConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectionManager.swift; sourceTree = "<group>"; };
 		F8EE701F2646F0BA00694505 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Window+VisibleVC.swift"; sourceTree = "<group>"; };
 		F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helper.swift"; sourceTree = "<group>"; };
 		F8EE703A2646F28B00694505 /* CWDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWDashboardVC.swift; sourceTree = "<group>"; };
 		F8EE703C2646F29B00694505 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		F8EE70422647162000694505 /* CWImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageCell.swift; sourceTree = "<group>"; };
 		F8EE70482647F95300694505 /* CWUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserListCell.swift; sourceTree = "<group>"; };
 		F8EE704A2648560500694505 /* CWUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWUserHeaderView.swift; sourceTree = "<group>"; };
-		F8EE70562648741500694505 /* CWImageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWImageDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,7 +276,6 @@
 		F8EE70212646F0BA00694505 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F8EE70222646F0BA00694505 /* Window+VisibleVC.swift */,
 				F8EE70232646F0BA00694505 /* UIStoryboard+Helper.swift */,
 			);
 			path = Extensions;
@@ -322,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				F8EE703A2646F28B00694505 /* CWDashboardVC.swift */,
-				F8EE70562648741500694505 /* CWImageDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -579,14 +573,12 @@
 				A890AC96264AEFBB000CC765 /* FeedDataSource.swift in Sources */,
 				F8EE70342646F0BA00694505 /* UIStoryboard+Helper.swift in Sources */,
 				F8EE70492647F95400694505 /* CWUserListCell.swift in Sources */,
-				F8EE70572648741600694505 /* CWImageDetailsVC.swift in Sources */,
 				A890AC97264AEFBB000CC765 /* FeedRepository.swift in Sources */,
 				A890AC86264AEF67000CC765 /* NetworkManager.swift in Sources */,
 				A890AC99264AEFBB000CC765 /* FeedNetworkDataSource.swift in Sources */,
 				A890AC88264AEF67000CC765 /* DataResponse.swift in Sources */,
 				F8EE703B2646F28B00694505 /* CWDashboardVC.swift in Sources */,
 				A890AC89264AEF67000CC765 /* ErrorResponse.swift in Sources */,
-				F8EE70332646F0BA00694505 /* Window+VisibleVC.swift in Sources */,
 				F8EE70312646F0BA00694505 /* Helper.swift in Sources */,
 				F8EE704B2648560600694505 /* CWUserHeaderView.swift in Sources */,
 			);

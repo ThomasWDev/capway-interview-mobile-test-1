@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IDMPhotoBrowser
 import SVProgressHUD
 
 class CWDashboardVC: UIViewController {
@@ -41,7 +42,7 @@ class CWDashboardVC: UIViewController {
                 SVProgressHUD.dismiss()
                 switch result {
                 case .success(let feeds): self.feeds = feeds
-                    case .failure(let error): break
+                case .failure(let error): debugPrint(error.localizedDescription)
                 }
             }
         })
@@ -79,6 +80,21 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feed = feeds[indexPath.row]
+        if !feed.isMultipleImages {
+            prevPhotos(photos: [IDMPhoto(url: URL(string: feed.urlToImage ?? "")!)])
+        } else {
+            prevPhotos(photos: feed.images.map{ IDMPhoto(image: (UIImage(named: $0) ?? UIImage()))})
+        }
+    }
+
+    private func prevPhotos(photos: [IDMPhoto]){
+
+        let photosVC = IDMPhotoBrowser(photos: photos)
+        self.present(photosVC!, animated: true, completion: nil)
     }
 }
 

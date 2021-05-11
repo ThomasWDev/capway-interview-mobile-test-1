@@ -14,6 +14,7 @@ target 'Capway' do
   pod 'NotificationBannerSwift'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage'
+  pod 'IDMPhotoBrowser', :git => 'https://github.com/ThomasWDev/IDMPhotoBrowser'
 
   target 'CapwayTests' do
     inherit! :search_paths

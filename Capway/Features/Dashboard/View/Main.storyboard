@@ -582,53 +582,10 @@
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="75.669642857142847"/>
         </scene>
-        <!--Image DetailsVC-->
-        <scene sceneID="GZs-eP-ar1">
-            <objects>
-                <viewController storyboardIdentifier="CWImageDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Os3-jB-5ae" customClass="CWImageDetailsVC" customModule="Capway" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3PU-s2-dtk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-nx-xLW">
-                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxM-zQ-FFu">
-                                <rect key="frame" x="369" y="54" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="GQ7-LE-U7V"/>
-                                    <constraint firstAttribute="width" constant="25" id="sWF-Tn-dWT"/>
-                                </constraints>
-                                <state key="normal" image="close"/>
-                                <connections>
-                                    <action selector="crossBtnAction:" destination="Os3-jB-5ae" eventType="touchUpInside" id="k5D-oP-X9c"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Xq5-7r-hP7"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fsI-nx-xLW" firstAttribute="top" secondItem="FxM-zQ-FFu" secondAttribute="bottom" constant="20" id="51e-5X-a55"/>
-                            <constraint firstItem="Xq5-7r-hP7" firstAttribute="trailing" secondItem="fsI-nx-xLW" secondAttribute="trailing" id="NNF-a0-xLJ"/>
-                            <constraint firstItem="FxM-zQ-FFu" firstAttribute="top" secondItem="Xq5-7r-hP7" secondAttribute="top" constant="10" id="ZfC-Nw-Etx"/>
-                            <constraint firstItem="Xq5-7r-hP7" firstAttribute="trailing" secondItem="FxM-zQ-FFu" secondAttribute="trailing" constant="20" id="pIv-fJ-Fxg"/>
-                            <constraint firstItem="fsI-nx-xLW" firstAttribute="leading" secondItem="Xq5-7r-hP7" secondAttribute="leading" id="wpb-yg-O4J"/>
-                            <constraint firstItem="Xq5-7r-hP7" firstAttribute="bottom" secondItem="fsI-nx-xLW" secondAttribute="bottom" id="x9t-ly-OOy"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="titleImageView" destination="fsI-nx-xLW" id="SBz-sV-8ct"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d0L-4t-K2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="905.79710144927549" y="75.669642857142847"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
-        <image name="close" width="49" height="53"/>
         <image name="ic_dummy_img_1" width="425" height="240"/>
         <image name="ic_dummy_img_4" width="750" height="500"/>
         <image name="ic_menu_dots" width="26" height="7"/>

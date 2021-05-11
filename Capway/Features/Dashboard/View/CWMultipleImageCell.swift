@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IDMPhotoBrowser
 
 class CWMultipleImageCell: UITableViewCell {
     
@@ -41,12 +42,13 @@ class CWMultipleImageCell: UITableViewCell {
     
     func configureCellWith(feed: Feed){
         self.feed = feed
-        titleLbl.attributedText = Helper.postAttributedTxt(feed: feed)
+        titleLbl.attributedText = Helper.feedheaderAttributedString(feed: feed)
         dateLbl.text = feed.publishedAt
         detailsLbl.text = feed.description
         profileImageView.sd_setImage(with: URL(string: feed.avatarURL), placeholderImage: UIImage(systemName: "person.circle.fill"), options: .refreshCached, context: nil)
         likeLbl.text = "\(feed.likes)"
         commentLbl.text = "\(feed.comments)"
+        collectionView.isUserInteractionEnabled = false
         collectionView.reloadData()
     }
 
@@ -113,26 +115,6 @@ extension CWMultipleImageCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return  0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageName = self.feed?.images[indexPath.row] ?? ""
-        
-        showImageDetails(imageName: imageName)
-    }
-    
-    private func showImageDetails(imageName: String){
-        let storyboard = UIStoryboard(storyboard: .dashboard)
-        let vc = storyboard.instantiateViewController(withIdentifier: CWImageDetailsVC.self)
-        vc.imageName = imageName
-        let mwindow = UIApplication.shared.connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-        guard let parentVC = mwindow?.visibleViewController() else {return}
-        parentVC.present(vc, animated: true, completion: nil)
     }
 }
 

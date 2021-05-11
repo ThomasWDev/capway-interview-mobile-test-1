@@ -35,7 +35,7 @@ class CWNormalCell: UITableViewCell {
     }
     
     func configureCellWith(feed: Feed){
-        titleLbl.attributedText = Helper.postAttributedTxt(feed: feed)
+        titleLbl.attributedText = Helper.feedheaderAttributedString(feed: feed)
         dateLbl.text = feed.publishedAt
         detailsLbl.text = feed.description
         titleImageView.sd_setImage(with: URL(string: feed.urlToImage ?? ""), completed: nil)
