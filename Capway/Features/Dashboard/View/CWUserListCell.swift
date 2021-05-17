@@ -21,7 +21,7 @@ class CWUserListCell: UICollectionViewCell {
         userImageView.layer.borderWidth = 1
         userImageView.layer.borderColor = UIColor.green.cgColor
         /// Testing purpose
-        userImageView.sd_setImage(with: URL(string: "https://gravatar.com/avatar/c572429be479f5661a39d48482b3ca24?s=400&d=robohash&r=x"), placeholderImage: UIImage(systemName: "person.circle.fill"), options: .refreshCached, context: nil)
+        userImageView.sd_setImage(with: URL(string: "https://pbs.twimg.com/media/DNUBk22W0AA1jIK.jpg"), placeholderImage: UIImage(systemName: "person.circle.fill"), options: .refreshCached, context: nil)
 
     }
     

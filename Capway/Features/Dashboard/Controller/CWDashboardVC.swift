@@ -47,6 +47,12 @@ class CWDashboardVC: UIViewController {
             }
         })
     }
+
+    private func showAlert(_ message : String) {
+        let alert = UIAlertController(title: "Capway", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     private func style(){
         self.navigationController?.navigationBar.isHidden = true
@@ -85,7 +91,9 @@ extension CWDashboardVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let feed = feeds[indexPath.row]
         if !feed.isMultipleImages {
-            prevPhotos(photos: [IDMPhoto(url: URL(string: feed.urlToImage ?? "")!)])
+            if let url = URL(string: feed.urlToImage ?? "") {
+                prevPhotos(photos: [IDMPhoto(url: url)])
+            }
         } else {
             prevPhotos(photos: feed.images.map{ IDMPhoto(image: (UIImage(named: $0) ?? UIImage()))})
         }

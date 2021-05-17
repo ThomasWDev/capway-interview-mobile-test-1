@@ -16,7 +16,7 @@ class FeedNetworkDataSource: FeedDataSource {
     }
     
     func fetchFeeds(completion: FeedDataSourceCompletion?) {
-        let requestConfiguration = RequestConfiguration(endpoint: "https://newsapi.org/v2/everything?q=iphone&from=2021-04-11&sortBy=publishedAt&apiKey=2ab0a50547d748dca7d11eeafa9b638d", httpMethod: .get, parameters: nil)
+        let requestConfiguration = RequestConfiguration(endpoint: "https://newsapi.org/v2/everything?q=tesla&from=2021-04-17&sortBy=publishedAt&apiKey=2ab0a50547d748dca7d11eeafa9b638d", httpMethod: .get, parameters: nil)
         networkManager.executeRequest(requestConfiguration: requestConfiguration, responseModel: NewsFeed.self) { result in
             switch result {
             case .success(let dataResponse):
